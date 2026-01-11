@@ -1,0 +1,203 @@
+/* Reset and base styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-brand: #02709c;
+    --color-brand-dark: #015a7d;
+    --color-text: #1a1a1a;
+    --color-text-muted: #666;
+    --color-bg: #fff;
+    --color-card-bg: #f8f9fa;
+    --color-border: #e5e5e5;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout */
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    margin-bottom: 4rem;
+}
+
+.jmx2-logo {
+    color: var(--color-text);
+    display: block;
+}
+
+/* Main content */
+main {
+    flex: 1;
+}
+
+/* Announcement section */
+.announcement {
+    margin-bottom: 4rem;
+}
+
+.announcement h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+
+.announcement .lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.announcement p {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+}
+
+.announcement p:last-child {
+    margin-bottom: 0;
+}
+
+/* Founders section */
+.founders {
+    margin-bottom: 4rem;
+}
+
+.founders h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.founders-intro {
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+}
+
+.founders-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.founder-card {
+    background: var(--color-card-bg);
+    border-radius: 8px;
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+}
+
+.founder-card h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--color-text);
+}
+
+.founder-role {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.25rem;
+}
+
+.founder-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.founder-links a {
+    color: var(--color-brand);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.founder-links a:hover {
+    color: var(--color-brand-dark);
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding-top: 3rem;
+    border-top: 1px solid var(--color-border);
+}
+
+footer p {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 2rem 1.25rem;
+    }
+
+    header {
+        margin-bottom: 3rem;
+    }
+
+    .announcement h2 {
+        font-size: 2rem;
+    }
+
+    .announcement .lead {
+        font-size: 1.125rem;
+    }
+
+    .founders-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .announcement,
+    .founders {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 4rem 2rem;
+    }
+
+    header {
+        margin-bottom: 5rem;
+    }
+
+    .announcement {
+        margin-bottom: 5rem;
+    }
+}
